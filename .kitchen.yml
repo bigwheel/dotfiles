@@ -1,0 +1,16 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: shell
+  data_path: ./
+
+platforms:
+  - name: ubuntu-14.04
+#   - name: centos-7.2
+
+suites:
+  - name: setup
+    provisioner:
+      script: ./data/setup-linux.sh
