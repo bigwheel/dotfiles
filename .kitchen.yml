@@ -11,6 +11,4 @@ platforms:
 #   - name: centos-7.2
 
 suites:
-  - name: setup
-    provisioner:
-      script: ./data/setup-linux.sh
+  - name: default
