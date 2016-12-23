@@ -1,1 +1,3 @@
 # dotfiles
+
+kitchenでテストする前にDROPBOX_ACCESS_TOKEN環境変数を設定すること
