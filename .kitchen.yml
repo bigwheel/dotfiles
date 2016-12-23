@@ -12,3 +12,6 @@ platforms:
 
 suites:
   - name: default
+    provisioner:
+      command_prefix: DROPBOX_ACCESS_TOKEN=<%= ENV['DROPBOX_ACCESS_TOKEN'] %>
+      script: bootstrap.sh

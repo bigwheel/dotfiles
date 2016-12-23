@@ -1,3 +1,3 @@
 #!/bin/bash
 
-/tmp/kitchen/data/setup-linux.sh
+echo $DROPBOX_ACCESS_TOKEN | /tmp/kitchen/data/setup-linux.sh
