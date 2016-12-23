@@ -5,9 +5,12 @@ driver:
 provisioner:
   name: shell
   data_path: ./
+  sudo: false
 
 platforms:
   - name: ubuntu-14.04
+    busser:
+      ruby_bindir: /usr/bin # さっきのRubyへのパス
 #   - name: centos-7.2
 
 suites:
