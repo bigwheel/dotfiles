@@ -6,3 +6,4 @@ set -eux
 script_dir=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
 
 $script_dir/ssh/setup-ssh-files.sh
+$script_dir/homeshick/install.sh
