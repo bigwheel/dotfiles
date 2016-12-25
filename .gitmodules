@@ -1,0 +1,3 @@
+[submodule "repos/tmux-castle"]
+	path = repos/tmux-castle
+	url = git@github.com:bigwheel/tmux-castle.git
