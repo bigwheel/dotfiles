@@ -11,7 +11,7 @@ verifier:
   sudo: false
 
 platforms:
-  - name: ubuntu-14.04
+  - name: ubuntu-16.04
     busser:
       ruby_bindir: /usr/bin # http://qiita.com/sawanoboly/items/2874018f385dbe8562b1
 #   - name: centos-7.2

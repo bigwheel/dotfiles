@@ -1,0 +1,5 @@
+ubuntu 16.10(04)
+centos 6.6
+centos 7.x
+cygwin..はもういいや
+mac os x

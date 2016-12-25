@@ -1,0 +1,1 @@
+../../../../repos/tmux-castle/test/tmux.bats
