@@ -3,6 +3,7 @@
 # DROPBOX_ACCESS_TOKEN環境変数
 #   id_rsaファイルを取得するならDropboxのアクセストークンを設定してください
 #   しないのであればno_needと設定してください
+
 set -eux
 
 # http://qiita.com/yudoufu/items/48cb6fb71e5b498b2532

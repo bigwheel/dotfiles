@@ -1,3 +1,6 @@
 [submodule "repos/tmux-castle"]
 	path = repos/tmux-castle
 	url = git@github.com:bigwheel/tmux-castle.git
+[submodule "repos/git-castle"]
+	path = repos/git-castle
+	url = git@github.com:bigwheel/git-castle.git
