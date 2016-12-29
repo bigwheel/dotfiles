@@ -21,3 +21,10 @@ homeshick --batch clone bigwheel/tmux-castle
 homeshick --batch link tmux-castle
 homeshick cd tmux-castle
 ./install.sh
+cd -
+
+homeshick --batch clone bigwheel/git-castle
+homeshick --batch link git-castle
+homeshick cd git-castle
+./install.sh
+cd -

@@ -1,0 +1,1 @@
+../../../../repos/git-castle/test/git.bats
