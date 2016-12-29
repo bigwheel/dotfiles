@@ -28,3 +28,8 @@ homeshick --batch link git-castle
 homeshick cd git-castle
 ./install.sh
 cd -
+homeshick --batch clone bigwheel/zsh-castle
+homeshick --batch link zsh-castle
+homeshick cd zsh-castle
+./setup.sh
+cd -

@@ -4,3 +4,6 @@
 [submodule "repos/git-castle"]
 	path = repos/git-castle
 	url = git@github.com:bigwheel/git-castle.git
+[submodule "repos/zsh-castle"]
+	path = repos/zsh-castle
+	url = git@github.com:bigwheel/zsh-castle.git
