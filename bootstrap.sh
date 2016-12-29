@@ -8,4 +8,4 @@
 # http://qiita.com/sawanoboly/items/2874018f385dbe8562b1
 sudo apt-get -y install ruby
 
-/tmp/kitchen/data/install-linux.sh
+GET_ID_RSA=TRUE HOST_TYPE=personal /tmp/kitchen/data/install-linux.sh
