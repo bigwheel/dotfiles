@@ -1,0 +1,1 @@
+../../../../repos/vim-castle/test/vim.bats
