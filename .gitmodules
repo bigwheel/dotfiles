@@ -7,3 +7,6 @@
 [submodule "repos/zsh-castle"]
 	path = repos/zsh-castle
 	url = git@github.com:bigwheel/zsh-castle.git
+[submodule "repos/vim-castle"]
+	path = repos/vim-castle
+	url = git@github.com:bigwheel/vim-castle.git
