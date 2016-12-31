@@ -15,11 +15,11 @@ script_dir=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
 SSH_DIR=$HOME/.ssh
 mkdir -p $SSH_DIR
 chmod 700 $SSH_DIR
-cp $script_dir/id_rsa.pub $SSH_DIR/id_rsa.pub
+cp $script_dir/files/id_rsa.pub $SSH_DIR/id_rsa.pub
 chmod 644 $SSH_DIR/id_rsa.pub
-cp $script_dir/config $SSH_DIR/config
+cp $script_dir/files/config $SSH_DIR/config
 chmod 644 $SSH_DIR/config
-cat $script_dir/id_rsa.pub >> $SSH_DIR/authorized_keys
+cat $script_dir/files/id_rsa.pub >> $SSH_DIR/authorized_keys
 chmod 644 $SSH_DIR/authorized_keys
 
 if [ "$GET_ID_RSA" = 'TRUE' ]
