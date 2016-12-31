@@ -1,6 +1,7 @@
 #!/usr/bin/env bats
 
-@test 'homeshick function exists' {
+@test 'homeshick command exists' {
   source $HOME/.zandbashrc
-  type homeshick | grep 'a function'
+  run type homeshick
+  [ "$status" -eq 0 ]
 }

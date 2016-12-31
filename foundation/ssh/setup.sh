@@ -9,6 +9,23 @@
 
 set -eux
 
+install() {
+    if which brew
+    then
+        sudo brew -y install $1
+    elif which yum
+    then
+        sudo yum -y install $1
+    elif which apt-get
+    then
+        sudo apt-get update
+        sudo apt-get install -y $1
+    else
+        echo 'unknown OS' >&2
+        exit 1
+    fi
+}
+
 # http://qiita.com/yudoufu/items/48cb6fb71e5b498b2532
 script_dir=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
 
@@ -24,8 +41,7 @@ chmod 644 $SSH_DIR/authorized_keys
 
 if [ "$GET_ID_RSA" = 'TRUE' ]
 then
-    sudo apt-get update
-    sudo apt-get install -y curl
+    install curl
     KEY_PATH="$SSH_DIR/id_rsa"
     # access tokenが露出しないようにコマンド表示を一時的に無効化
     set +x

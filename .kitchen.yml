@@ -9,11 +9,12 @@ provisioner:
 
 verifier:
   sudo: false
-  ruby_bindir: /usr/bin # http://qiita.com/sawanoboly/items/2874018f385dbe8562b1
+  ruby_bindir: /opt/chefdk/embedded/bin
 
 platforms:
   - name: ubuntu-16.04
-#   - name: centos-7.2
+  - name: centos-7.2
+  - name: centos-6.7
 
 suites:
   - name: default

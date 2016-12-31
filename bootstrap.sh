@@ -6,6 +6,6 @@
 #
 # よって先人に習い、bootstrap.shでrubyを入れることによりとりあえず解決する
 # http://qiita.com/sawanoboly/items/2874018f385dbe8562b1
-sudo apt-get -y install ruby
+curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -c current -P chefdk
 
 GET_ID_RSA=TRUE HOST_TYPE=personal /tmp/kitchen/data/setup-linux.sh
