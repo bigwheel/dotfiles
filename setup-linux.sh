@@ -19,14 +19,11 @@ EOF
 
 homeshick --batch clone bigwheel/tmux-castle
 homeshick --batch link tmux-castle
-homeshick cd tmux-castle
-./install.sh
-cd -
 
 homeshick --batch clone bigwheel/git-castle
 homeshick --batch link git-castle
 homeshick cd git-castle
-./install.sh
+./setup.sh
 cd -
 
 homeshick --batch clone bigwheel/zsh-castle
@@ -37,6 +34,3 @@ cd -
 
 homeshick --batch clone bigwheel/vim-castle
 homeshick --batch link vim-castle
-homeshick cd vim-castle
-./setup.sh
-cd -
