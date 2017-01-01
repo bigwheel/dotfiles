@@ -8,7 +8,7 @@ script_dir=$(cd $(dirname ${BASH_SOURCE:-$0}); pwd)
 install() {
     if which brew
     then
-        sudo brew -y install $1
+        brew install $1
     elif which yum
     then
         sudo yum -y install $1

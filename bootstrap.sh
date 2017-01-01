@@ -8,4 +8,9 @@
 # http://qiita.com/sawanoboly/items/2874018f385dbe8562b1
 curl https://omnitruck.chef.io/install.sh | sudo bash -s -- -c current -P chefdk
 
+if [ `uname` = 'Darwin' ]
+then
+    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" < /dev/null
+fi
+
 GET_ID_RSA=TRUE HOST_TYPE=personal /tmp/kitchen/data/setup-linux.sh

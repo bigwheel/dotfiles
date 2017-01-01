@@ -12,7 +12,7 @@ set -eux
 install() {
     if which brew
     then
-        sudo brew -y install $1
+        brew install $1
     elif which yum
     then
         sudo yum -y install $1
