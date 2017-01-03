@@ -28,9 +28,6 @@ cd -
 
 homeshick --batch clone bigwheel/zsh-castle
 homeshick --batch link zsh-castle
-homeshick cd zsh-castle
-./setup.sh
-cd -
 
 homeshick --batch clone bigwheel/vim-castle
 homeshick --batch link vim-castle
