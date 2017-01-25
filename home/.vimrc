@@ -21,8 +21,7 @@ Plug 'walm/jshint.vim'
 Plug 'vim-coffee-script'
 
 Plug 'derekwyatt/vim-scala'
-" 無効化理由不明。なんらかの不具合があった？
-" Plug 'ktvoelker/sbt-vim'
+Plug 'derekwyatt/vim-sbt'
 
 Plug 'everzet/phpfolding.vim'
 
@@ -34,6 +33,8 @@ Plug 'elzr/vim-json'
 Plug 'stephpy/vim-yaml'
 
 Plug 'Matt-Deacalion/vim-systemd-syntax'
+
+Plug 'tmux-plugins/vim-tmux'
 
 " 以下はしばらく使ってないので一旦無効化中
 " Plug 'stonean/slim'

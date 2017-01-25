@@ -9,3 +9,5 @@ augroup END
 
 au BufRead,BufNewFile *.hocon set filetype=hocon
 au BufRead,BufNewFile *.cap set filetype=ruby
+au BufRead,BufNewFile .gitconfig* set filetype=gitconfig
+au BufRead,BufNewFile .tmux.conf* set filetype=tmux
