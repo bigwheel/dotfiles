@@ -1,3 +1,9 @@
+set encoding=utf-8
+scriptencoding utf-8
+set fileencodings=utf-8
+set fileencoding=utf-8
+set ambiwidth=double " □や○文字が崩れる問題を解決
+
 " https://github.com/junegunn/vim-plug/wiki/faq#automatic-installation
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -29,6 +35,9 @@ Plug 'plasticboy/vim-markdown'
 Plug 'kannokanno/previm'
 
 Plug 'elzr/vim-json'
+" コピペでダブルクォートないことに気づかず貼り付ける事案が
+" 多く発生したのでquote concealingは無効化
+let g:vim_json_syntax_conceal = 0
 
 Plug 'stephpy/vim-yaml'
 
@@ -182,10 +191,6 @@ endif
 :let g:PreserveNoEOL = 1
 
 let g:previm_open_cmd = 'vim '
-
-set fileencodings=utf8
-set fileencoding=utf8
-set encoding=utf8
 
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 set clipboard+=unnamed
