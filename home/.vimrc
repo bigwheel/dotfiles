@@ -1,7 +1,10 @@
+" 以下を参考にして記述
+" http://qiita.com/ahiruman5/items/4f3c845500c172a02935
 set encoding=utf-8
 scriptencoding utf-8
-set fileencodings=utf-8
-set fileencoding=utf-8
+set fileencoding=utf-8 " 保存時の文字コード
+set fileencodings=utf-8,euc-jp,cp932 " 読み込み時の文字コードの自動判別. 左側が優先される
+set fileformats=unix,dos,mac " 改行コードの自動判別. 左側が優先される
 set ambiwidth=double " □や○文字が崩れる問題を解決
 
 " https://github.com/junegunn/vim-plug/wiki/faq#automatic-installation
@@ -14,6 +17,8 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'sudo.vim'
+
+" 見た目
 Plug 'altercation/vim-colors-solarized'
 
 " 言語支援・シンタックスハイライト系
@@ -69,56 +74,48 @@ Plug 'tmux-plugins/vim-tmux'
 
 call plug#end()
 
-
-" タブがスペース2個で入るように拡張子で指定
-"au BufNewFile,BufRead *.yml set tabstop=2 shiftwidth=2 expandtab smarttab
-"au BufNewFile,BufRead *.erb set tabstop=2 shiftwidth=2 expandtab smarttab
-set expandtab
-set tabstop=4 shiftwidth=4 softtabstop=4
-set autoindent
-
-
-set mouse=a
-
-set incsearch
-set hlsearch
-" Press Space to turn off highlighting and clear any message already displayed.
-:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
-
-"set autochdir
-
-
-
-"nnoremap b :VimFiler -split -simple -winwidth=35 -no-quit<Return>
-
-
-" theme desert
-"colorscheme desert
-" theme solarized
+" 見た目
 syntax enable
 set background=dark
 colorscheme solarized
-" end
 
-set t_Co=16
+" タブがスペース2個で入るように拡張子で指定
+set expandtab " タブ入力を複数の空白入力に置き換える
+set tabstop=4 " 画面上でタブ文字が占める幅
+set softtabstop=4 " 連続した空白に対してタブキーやバックスペースキーでカーソルが動く幅
+set autoindent " 改行時に前の行のインデントを継続する
+set smartindent " 改行時に前の行の構文をチェックし次の行のインデントを増減する
+set shiftwidth=4 " smartindentで増減する幅
+
+set incsearch " インクリメンタルサーチ. １文字入力毎に検索を行う
+set ignorecase " 検索パターンに大文字小文字を区別しない
+set smartcase " 検索パターンに大文字を含んでいたら大文字小文字を区別する
+set hlsearch " 検索結果をハイライト
+
+" ESCキー2度押しでハイライトの切り替え
+"nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
+
 set number
-"highlight LineNr ctermfg=yellow
-"let g:solarized_termcolors=16
-set wrap
+set cursorline
 
-set ignorecase
-set smartcase
-
-set hidden
-set scrolloff=5
 set showmatch
-set laststatus=2
-set cmdheight=2
 
 set wildmenu
 set wildmode=list:longest,full
-
 set history=1000
+
+set mouse=a
+
+set autochdir
+
+set t_Co=16
+set wrap
+
+set hidden
+set scrolloff=5
+set laststatus=2
+set cmdheight=2
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
@@ -177,12 +174,6 @@ endif
 """"""""""""""""""""""""""""""
 "ここまで
 """""""""""""""""""""""""""""""
-":inoremap <silent> <Esc> <Esc>:<C-u>call ibus#disable()<CR>
-":inoremap <silent> <C-c> <C-c>:<C-u>call ibus#disable()<CR>
-":inoremap <silent> <C-j> <C-\><C-o>:<C-u>call ibus#toggle()<CR>
-":set statusline=[%{ibus#is_enabled()?'あ':'aA'}]
-
-nmap <F9> :NERDTreeToggle<CR>
 
 if has('path_extra')
     set tags+=tags;
