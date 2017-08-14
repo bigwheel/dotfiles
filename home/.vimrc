@@ -50,6 +50,7 @@ Plug 'Matt-Deacalion/vim-systemd-syntax'
 
 Plug 'tmux-plugins/vim-tmux'
 
+Plug 'nginx.vim'
 " 以下はしばらく使ってないので一旦無効化中
 " Plug 'stonean/slim'
 " Plug 'bbommarito/vim-slim'
