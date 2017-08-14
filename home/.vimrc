@@ -129,7 +129,9 @@ if filereadable(expand('~/.vimrc.local'))
 	source ~/.vimrc.local
 endif
 
-
+" https://stackoverflow.com/a/7912621/4006322
+set splitright
+set splitbelow
 
 
 
