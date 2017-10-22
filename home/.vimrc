@@ -30,6 +30,7 @@ Plug 'scrooloose/syntastic'
 Plug 'walm/jshint.vim'
 
 Plug 'vim-coffee-script'
+Plug 'leafgarland/typescript-vim'
 
 Plug 'derekwyatt/vim-scala'
 Plug 'derekwyatt/vim-sbt'
