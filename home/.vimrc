@@ -16,7 +16,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'sudo.vim'
+Plug 'vim-scripts/sudo.vim'
 
 " 見た目
 Plug 'altercation/vim-colors-solarized'
@@ -24,12 +24,12 @@ Plug 'altercation/vim-colors-solarized'
 " 言語支援・シンタックスハイライト系
 Plug 'vim-ruby/vim-ruby'
 
-Plug 'JavaScript-syntax'
+Plug 'vim-scripts/JavaScript-syntax'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/syntastic'
 Plug 'walm/jshint.vim'
 
-Plug 'vim-coffee-script'
+Plug 'vim-scripts/vim-coffee-script'
 Plug 'leafgarland/typescript-vim'
 
 Plug 'derekwyatt/vim-scala'
@@ -51,7 +51,7 @@ Plug 'Matt-Deacalion/vim-systemd-syntax'
 
 Plug 'tmux-plugins/vim-tmux'
 
-Plug 'nginx.vim'
+Plug 'vim-scripts/nginx.vim'
 " 以下はしばらく使ってないので一旦無効化中
 " Plug 'stonean/slim'
 " Plug 'bbommarito/vim-slim'
