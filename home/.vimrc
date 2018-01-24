@@ -77,6 +77,7 @@ Plug 'Shougo/unite.vim'
 Plug 'scrooloose/nerdtree'
 " Plug 'bufexplorer.zip'
 " Plug 'Smooth-Scroll' " バグることが多かったので無効化
+Plug 'LeafCage/yankround.vim'
 
 " 他人とリポジトリを共有しているときに毎回勝手に改行文字が入って
 " 変な差分になるのが嫌で入れたが、最近そんな行儀の悪いエディタを
