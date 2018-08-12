@@ -61,6 +61,8 @@ Plug 'b4b4r07/vim-hcl'
 
 Plug 'posva/vim-vue'
 
+Plug 'ekalinin/Dockerfile.vim'
+
 " 以下はしばらく使ってないので一旦無効化中
 " Plug 'stonean/slim'
 " Plug 'bbommarito/vim-slim'
@@ -198,4 +200,5 @@ endif
 let g:previm_open_cmd = 'vim '
 
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
-set clipboard+=unnamed
+" https://sekisuiseien.com/computer/11064/
+set clipboard+=unnamedplus
