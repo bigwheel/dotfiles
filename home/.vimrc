@@ -86,6 +86,8 @@ Plug 'LeafCage/yankround.vim'
 " 使う人と一緒に仕事をしていないので無効化
 " Plug 'PreserveNoEOL'
 
+Plug 'farmergreg/vim-lastplace'
+
 call plug#end()
 
 " 見た目
