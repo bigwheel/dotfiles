@@ -203,4 +203,7 @@ let g:previm_open_cmd = 'vim '
 
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 " https://sekisuiseien.com/computer/11064/
-set clipboard+=unnamedplus
+" set clipboard+=unnamedplus
+" +=ではデフォルト値が最も左のままなので駄目と書いてある
+set clipboard&
+set clipboard^=unnamedplus
