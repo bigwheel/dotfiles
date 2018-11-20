@@ -40,7 +40,8 @@ Plug 'everzet/phpfolding.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'kannokanno/previm'
 
-Plug 'python-mode/python-mode'
+" pyenv と相性が悪い。一時無効化
+" Plug 'python-mode/python-mode'
 
 Plug 'elzr/vim-json'
 " コピペでダブルクォートないことに気づかず貼り付ける事案が
@@ -62,6 +63,10 @@ Plug 'b4b4r07/vim-hcl'
 Plug 'posva/vim-vue'
 
 Plug 'ekalinin/Dockerfile.vim'
+
+Plug 'hashivim/vim-terraform'
+
+Plug 'aklt/plantuml-syntax'
 
 " 以下はしばらく使ってないので一旦無効化中
 " Plug 'stonean/slim'
