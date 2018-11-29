@@ -207,8 +207,13 @@ endif
 let g:previm_open_cmd = 'vim '
 
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
-" https://sekisuiseien.com/computer/11064/
-" set clipboard+=unnamedplus
-" +=ではデフォルト値が最も左のままなので駄目と書いてある
-set clipboard&
-set clipboard^=unnamedplus
+if has('macunix')
+  set clipboard+=unnamed
+  " 下ではmacではvim内でのyankが反映されなくなってしまったので、macの場合はこっちにした
+else
+  " https://sekisuiseien.com/computer/11064/
+  " set clipboard+=unnamedplus
+  " +=ではデフォルト値が最も左のままなので駄目と書いてある
+  set clipboard&
+  set clipboard^=unnamedplus
+endif
