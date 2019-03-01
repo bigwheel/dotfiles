@@ -68,6 +68,8 @@ Plug 'hashivim/vim-terraform'
 
 Plug 'aklt/plantuml-syntax'
 
+Plug 'dag/vim2hs'
+
 " 以下はしばらく使ってないので一旦無効化中
 " Plug 'stonean/slim'
 " Plug 'bbommarito/vim-slim'
@@ -128,7 +130,7 @@ set history=1000
 
 set mouse=a
 
-set autochdir
+"set autochdir
 
 set t_Co=16
 set wrap
