@@ -42,6 +42,7 @@ Plug 'kannokanno/previm'
 
 " pyenv と相性が悪い。一時無効化
 " Plug 'python-mode/python-mode'
+Plug 'Vimjas/vim-python-pep8-indent'
 
 Plug 'elzr/vim-json'
 " コピペでダブルクォートないことに気づかず貼り付ける事案が
