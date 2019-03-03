@@ -22,11 +22,13 @@ Plug 'vim-scripts/sudo.vim'
 Plug 'altercation/vim-colors-solarized'
 
 " 言語支援・シンタックスハイライト系
+Plug 'editorconfig/editorconfig-vim'
+
 Plug 'vim-ruby/vim-ruby'
 
 Plug 'vim-scripts/JavaScript-syntax'
 Plug 'pangloss/vim-javascript'
-Plug 'scrooloose/syntastic'
+Plug 'scrooloose/syntastic' " こいつpythonなどにも作用しているので注意
 Plug 'walm/jshint.vim'
 
 Plug 'vim-scripts/vim-coffee-script'
@@ -79,7 +81,8 @@ Plug 'dag/vim2hs'
 " 一度入れたけど活用できていない系
 " Plug 'quickrun'
 Plug 'Shougo/unite.vim'
-" Plug 'mru.vim'
+Plug 'Shougo/neomru.vim'
+Plug 'Shougo/neoyank.vim'
 " Plug 'Shougo/vimfiler'
 " Plug 'Shougo/vimproc'
 " Plug 'Shougo/vimshell'
@@ -131,7 +134,8 @@ set history=1000
 
 set mouse=a
 
-"set autochdir
+" 不便に感じるシーンが増えてきたので一旦切る
+" set autochdir
 
 set t_Co=16
 set wrap
@@ -220,3 +224,20 @@ else
   set clipboard&
   set clipboard^=unnamedplus
 endif
+
+
+
+" https://qiita.com/hide/items/77b9c1b0f29577d60397
+let g:unite_enable_start_insert=1
+let g:unite_source_history_yank_enable =1
+let g:unite_source_file_mru_limit = 200
+nnoremap <silent> ,uy :<C-u>Unite history/yank<CR>
+nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
+nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+" directoryのd
+nnoremap <silent> ,ud :<C-u>Unite file<CR>
+nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
+nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
+
+" https://qiita.com/zwirky/items/0209579a635b4f9c95ee
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
