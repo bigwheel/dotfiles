@@ -241,3 +241,6 @@ nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
 
 " https://qiita.com/zwirky/items/0209579a635b4f9c95ee
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
+
+" https://vim.fandom.com/wiki/Ignore_white_space_in_vimdiff
+set diffopt+=iwhite
