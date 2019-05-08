@@ -42,6 +42,10 @@ Plug 'everzet/phpfolding.vim'
 Plug 'plasticboy/vim-markdown'
 Plug 'kannokanno/previm'
 
+Plug 'jparise/vim-graphql'
+
+Plug 'lepture/vim-velocity'
+
 " pyenv と相性が悪い。一時無効化
 " Plug 'python-mode/python-mode'
 Plug 'Vimjas/vim-python-pep8-indent'
@@ -244,3 +248,8 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 " https://vim.fandom.com/wiki/Ignore_white_space_in_vimdiff
 set diffopt+=iwhite
+
+" https://dackdive.hateblo.jp/entry/2015/01/07/225059
+let g:syntastic_python_checkers = ['flake8']
+
+au BufNewFile,BufRead *.vtl set ft=velocity
