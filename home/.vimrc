@@ -250,6 +250,9 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 set diffopt+=iwhite
 
 " https://dackdive.hateblo.jp/entry/2015/01/07/225059
+" let g:syntastic_python_checkers = ['flake8', 'mypy']
 let g:syntastic_python_checkers = ['flake8']
 
 au BufNewFile,BufRead *.vtl set ft=velocity
+
+set showtabline=2
