@@ -74,6 +74,7 @@ Plug 'posva/vim-vue'
 Plug 'ekalinin/Dockerfile.vim'
 
 Plug 'hashivim/vim-terraform'
+let g:terraform_fmt_on_save = 1
 
 Plug 'aklt/plantuml-syntax'
 
