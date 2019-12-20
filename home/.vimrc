@@ -46,6 +46,8 @@ Plug 'jparise/vim-graphql'
 
 Plug 'lepture/vim-velocity'
 
+Plug 'google/vim-jsonnet'
+
 " pyenv と相性が悪い。一時無効化
 " Plug 'python-mode/python-mode'
 Plug 'Vimjas/vim-python-pep8-indent'
