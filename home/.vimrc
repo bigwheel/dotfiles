@@ -48,6 +48,8 @@ Plug 'lepture/vim-velocity'
 
 Plug 'google/vim-jsonnet'
 
+Plug 'rosstimson/bats.vim'
+
 " pyenv と相性が悪い。一時無効化
 " Plug 'python-mode/python-mode'
 Plug 'Vimjas/vim-python-pep8-indent'
@@ -255,6 +257,9 @@ set diffopt+=iwhite
 " https://dackdive.hateblo.jp/entry/2015/01/07/225059
 " let g:syntastic_python_checkers = ['flake8', 'mypy']
 let g:syntastic_python_checkers = ['flake8']
+
+" batsの編集でfalse positiveな警告を出すので無効化
+let g:syntastic_sh_checkers = []
 
 au BufNewFile,BufRead *.vtl set ft=velocity
 
