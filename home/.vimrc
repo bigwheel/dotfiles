@@ -264,10 +264,3 @@ let g:syntastic_sh_checkers = []
 au BufNewFile,BufRead *.vtl set ft=velocity
 
 set showtabline=2
-
-" https://vim.fandom.com/wiki/Map_semicolon_to_colon
-" https://sy-base.com/myrobotics/mac/us-keyboard-vim/
-nnoremap ; :
-nnoremap : ;
-vnoremap : :
-vnoremap : ;
