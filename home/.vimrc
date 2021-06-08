@@ -88,6 +88,7 @@ Plug 'dag/vim-fish'
 " Plug 'stonean/slim'
 " Plug 'bbommarito/vim-slim'
 " Plug 'GEverding/vim-hocon'
+Plug 'slim-template/vim-slim'
 
 " 一度入れたけど活用できていない系
 " Plug 'quickrun'
