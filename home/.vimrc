@@ -82,6 +82,8 @@ Plug 'aklt/plantuml-syntax'
 
 Plug 'dag/vim2hs'
 
+Plug 'dag/vim-fish'
+
 " 以下はしばらく使ってないので一旦無効化中
 " Plug 'stonean/slim'
 " Plug 'bbommarito/vim-slim'
@@ -117,11 +119,11 @@ colorscheme solarized
 
 " タブがスペース2個で入るように拡張子で指定
 set expandtab " タブ入力を複数の空白入力に置き換える
-set tabstop=2 " 画面上でタブ文字が占める幅
-set softtabstop=2 " 連続した空白に対してタブキーやバックスペースキーでカーソルが動く幅
+set tabstop=4 " 画面上でタブ文字が占める幅
+set softtabstop=4 " 連続した空白に対してタブキーやバックスペースキーでカーソルが動く幅
 set autoindent " 改行時に前の行のインデントを継続する
 set smartindent " 改行時に前の行の構文をチェックし次の行のインデントを増減する
-set shiftwidth=2 " smartindentで増減する幅
+set shiftwidth=4 " smartindentで増減する幅
 
 set incsearch " インクリメンタルサーチ. １文字入力毎に検索を行う
 set ignorecase " 検索パターンに大文字小文字を区別しない
