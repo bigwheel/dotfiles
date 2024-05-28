@@ -1,0 +1,6 @@
+[gcloud]
+disabled = true
+[terraform]
+disabled = true
+[aws]
+format = 'on [$symbol($profile )(\[$duration\] )]($style)'
