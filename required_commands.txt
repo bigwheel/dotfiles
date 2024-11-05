@@ -3,6 +3,8 @@ git
 vim
 fish
 starship
+gh
+fzf
 
 # testing
 icdiff
