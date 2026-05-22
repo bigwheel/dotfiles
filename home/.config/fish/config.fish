@@ -1,4 +1,6 @@
 if status is-interactive
+    # https://github.com/asdf-community/asdf-golang/issues/123#issuecomment-1918034578
+    set -gx ASDF_GOLANG_MOD_VERSION_ENABLED true
     # 以下は期待通りに動いていない気がする
     # # https://qiita.com/yoshiori/items/f1c01dd94bb5f0489cf6
     # function history-merge --on-event fish_preexec
@@ -29,6 +31,7 @@ if status is-interactive
       else
           source /home/linuxbrew/.linuxbrew/opt/asdf/libexec/asdf.fish
       end
+      source ~/.asdf/plugins/golang/set-env.fish
     end
 
     fish_add_path $HOME/.krew/bin
@@ -59,6 +62,8 @@ if status is-interactive
         fish_add_path $HOMEBREW_PREFIX/opt/grep/libexec/gnubin
         source $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.fish
     else
+        set GOPATH $HOME/go
+        fish_add_path $GOPATH/bin # ubuntu
         fish_add_path /usr/share/doc/git/contrib/diff-highlight # ubuntu
     end
 

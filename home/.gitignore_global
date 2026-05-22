@@ -4,6 +4,7 @@
 *.swo
 *.crc
 *~.nib
+tmp.*
 
 # gedit
 *~
