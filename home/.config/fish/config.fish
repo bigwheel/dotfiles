@@ -60,7 +60,7 @@ if status is-interactive
         fish_add_path $HOMEBREW_PREFIX/opt/findutils/libexec/gnubin
         fish_add_path $HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin
         fish_add_path $HOMEBREW_PREFIX/opt/grep/libexec/gnubin
-        source $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.fish
+        source $HOMEBREW_PREFIX/opt/asdf/share/fish/vendor_completions.d/asdf.fish
     else
         set GOPATH $HOME/go
         fish_add_path $GOPATH/bin # ubuntu
