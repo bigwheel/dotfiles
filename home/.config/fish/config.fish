@@ -1,6 +1,6 @@
 if status is-interactive
     # https://github.com/asdf-community/asdf-golang/issues/123#issuecomment-1918034578
-    set -gx ASDF_GOLANG_MOD_VERSION_ENABLED true
+    # set -gx ASDF_GOLANG_MOD_VERSION_ENABLED true
     # 以下は期待通りに動いていない気がする
     # # https://qiita.com/yoshiori/items/f1c01dd94bb5f0489cf6
     # function history-merge --on-event fish_preexec
@@ -60,7 +60,20 @@ if status is-interactive
         fish_add_path $HOMEBREW_PREFIX/opt/findutils/libexec/gnubin
         fish_add_path $HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin
         fish_add_path $HOMEBREW_PREFIX/opt/grep/libexec/gnubin
-        source $HOMEBREW_PREFIX/opt/asdf/share/fish/vendor_completions.d/asdf.fish
+
+        # ASDF configuration code
+        if test -z $ASDF_DATA_DIR
+            set _asdf_shims "$HOME/.asdf/shims"
+        else
+            set _asdf_shims "$ASDF_DATA_DIR/shims"
+        end
+
+        # Do not use fish_add_path (added in Fish 3.2) because it
+        # potentially changes the order of items in PATH
+        if not contains $_asdf_shims $PATH
+            set -gx --prepend PATH $_asdf_shims
+        end
+        set --erase _asdf_shims
     else
         set GOPATH $HOME/go
         fish_add_path $GOPATH/bin # ubuntu
