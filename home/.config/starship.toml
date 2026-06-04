@@ -3,4 +3,6 @@ disabled = true
 [terraform]
 disabled = true
 [aws]
-format = 'on [$symbol($profile )(\[$duration\] )]($style)'
+# セッション時間が7時間xxなど表示されて鬱陶しい。今の使い方だとディレクトリにプロファイルが固定されていないこともあるので無効化
+# format = 'on [$symbol($profile )(\[$duration\] )]($style)'
+disabled = true
