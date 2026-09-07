@@ -34,3 +34,4 @@ set --global fish_pager_color_completion
 set --global fish_pager_color_description B3A06D yellow
 set --global fish_pager_color_prefix normal --bold --underline
 set --global fish_pager_color_progress brwhite --background=cyan
+set --global fish_pager_color_selected_background '-r'
