@@ -60,7 +60,8 @@ if status is-interactive
         fish_add_path $HOMEBREW_PREFIX/opt/findutils/libexec/gnubin
         fish_add_path $HOMEBREW_PREFIX/opt/gnu-sed/libexec/gnubin
         fish_add_path $HOMEBREW_PREFIX/opt/grep/libexec/gnubin
-        fish_add_path $HOMEBREW_PREFIX/opt/homebrew/opt/mysql-client/bin
+        fish_add_path $HOMEBREW_PREFIX/opt/mysql-client/bin
+        fish_add_path $HOMEBREW_PREFIX/opt/libpq/bin
 
         # ASDF configuration code
         if test -z $ASDF_DATA_DIR
